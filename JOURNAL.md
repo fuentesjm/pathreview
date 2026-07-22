@@ -17,7 +17,8 @@ tech_detector.py fails to filter out biuld-output files such as node_modules/ an
 
 ## Week 8 — Reproduction & solution planning
 
-**Reproduction commit link:** https://github.com/fuentesjm/pathreview/commit/6fcdbd656f49817b4702d99dcff1126e7f9a355e
+**Reproduction commit link:** https://github.com/fuentesjm/pathreview/commit/65e11fd9b7987b1465447a556e5d8f89093c206c
+
 
 
 **Reproduction summary:**
