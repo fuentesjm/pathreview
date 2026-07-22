@@ -17,12 +17,14 @@ tech_detector.py fails to filter out biuld-output files such as node_modules/ an
 
 ## Week 8 — Reproduction & solution planning
 
-**Reproduction commit link:** [link to commit documenting the reproduced issue]
+**Reproduction commit link:** https://github.com/fuentesjm/pathreview/commit/6fcdbd656f49817b4702d99dcff1126e7f9a355e
+
 
 **Reproduction summary:**
-[1–2 sentences: How did you reproduce the issue? What did you observe?]
+I ran pytest tests/unit/test_tech_detector.py and found test_node_modules_excluded and test_build_directory_excluded already failing: a repo with a root-level node_modules/ or build/ directory reports primary_language: "JavaScript" instead of "Python". The root cause is _should_skip_file, whose skip patterns require a leading slash (/node_modules/), so top-level vendored/build directories are never excluded and their files skew language detection.
 
-**PLAN.md link:** [link to PLAN.md in your fork]
+**PLAN.md link:** https://github.com/fuentesjm/pathreview/blob/fix/150-tech-detector-skewing-language-detection/PLAN.md
+
 
 **Walkthrough video (recommended):** [link to your Loom video, ≤2 min — recommended, not graded]
 
