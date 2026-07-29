@@ -49,16 +49,17 @@ None.
 
 ### Check-in 2 (end of week)
 
-**PR link:** [link to your submitted pull request]
+**PR link:** https://github.com/ascherj/pathreview/pull/366
 
-**Branch:** [the branch name you worked on, e.g. `fix/123-short-description`]
+**Branch:** `fix/150-tech-detector-skewing-language-detection`
 
 **What you built:**
-[1–3 sentences summarizing what your fix does and how it works]
+Fixed the tech detector so vendored and build-output files are no longer counted as project source. `_should_skip_file` now splits each path into segments and matches them against a `SKIP_DIRS` set (with backslash normalization), so top-level directories like `node_modules/`, `build/`, and `dist/` are excluded — not just nested ones — which stops a Python project from being misreported as primarily JavaScript.
 
 **Tests added or updated:**
-[Which test files did you touch? What do they cover?]
+`tests/unit/test_tech_detector.py` — added 6 regression tests: root-level `node_modules/`, `dist/`, `vendor/`, and `.venv/` exclusion; a guard that filenames merely containing a skip keyword (`rebuild.py`, `vendored_data.py`) are not excluded; and a fully-vendored repo resolving to `Unknown`. The two previously-failing tests (`test_node_modules_excluded`, `test_build_directory_excluded`) now pass — the suite is 33/33 green.
 
-**Self-review confirmation:** [ ] make check passes  [ ] make test-unit passes
+**Self-review confirmation:** [x] make check passes  [x] make test-unit passes
+*(Both exit non-zero only due to pre-existing failures unrelated to #150 — identical on base commit `fb93406` (181 ruff / 103 mypy / 51 unit). My change introduces no new failures and fixes 2 unit tests; changed files are ruff + mypy clean.)*
 
-**Draft PR feedback received from:** [name or Slack handle, or "none"]
+**Draft PR feedback received from:** none
