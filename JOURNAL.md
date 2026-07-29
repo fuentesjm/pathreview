@@ -43,6 +43,22 @@ All four PLAN.md sub-tasks are complete. The root cause — `_should_skip_file` 
 Open the PR against `ascherj/pathreview` using the PR template, documenting the pre-existing repo failures and stating my change introduces none. Optionally record a short walkthrough video. Then complete the Check-in 2 self-review boxes.
 
 **Blockers:**
-None. Note: the repo has substantial pre-existing failures unrelated to #150 (181 ruff, 103 mypy, 51 unit — identical on base commit `fb93406`); my change touches only `agent/tools/tech_detector.py` and its tests and introduces no new failures (it fixes 2 unit tests and removes 1 ruff error).
+None. 
 
 ---
+
+### Check-in 2 (end of week)
+
+**PR link:** [link to your submitted pull request]
+
+**Branch:** [the branch name you worked on, e.g. `fix/123-short-description`]
+
+**What you built:**
+[1–3 sentences summarizing what your fix does and how it works]
+
+**Tests added or updated:**
+[Which test files did you touch? What do they cover?]
+
+**Self-review confirmation:** [ ] make check passes  [ ] make test-unit passes
+
+**Draft PR feedback received from:** [name or Slack handle, or "none"]
