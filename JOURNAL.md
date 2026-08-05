@@ -63,3 +63,34 @@ Fixed the tech detector so vendored and build-output files are no longer counted
 *(Both exit non-zero only due to pre-existing failures unrelated to #150 — identical on base commit `fb93406` (181 ruff / 103 mypy / 51 unit). My change introduces no new failures and fixes 2 unit tests; changed files are ruff + mypy clean.)*
 
 **Draft PR feedback received from:** none
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [] Yes  [x] No — still awaiting review
+
+**Summary of feedback:**
+No Feedback.
+
+**How you responded:**
+No Feedback.
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+Getting the app running was as hard as attempting to fix the issue. A Postgres port 5433 collided with the Docker container port I had on my laptop which made the setup say "password athentication failed". It took longer than expected to fix that issue before I can fix issue 150.
+
+**What did you learn about working in a large codebase?**
+Working on a large codebase can throw me off. I tend to find out you need to isolate your issue that you need to tackle and avoid going to a rabbit hole realizing the repo had uunrelated unit-test failures caused by other issues.
+
+**How did AI tools help — and where did they fall short?**
+Helping me understand the code more clearly. Reassuring that what I understand about the repo is true. It was also useful in helping me locate the bug and find out the real root of the problem. Where it fall short is sometimes it will get carried away so you have to know that AI is just focusing on one particular issue not many,
+
+**What would you do differently if you started over?**
+Planning I will do differently. I will next time make sure to reproduce the bug many times and not go straight into fixing it. Keeping the branch cleaner will be on I will do differently next time.
+
+**What are you most proud of from this module?**
+I am most proud of being able to write git command lines in terminal. Figuring out and constributing the a large repo. Being able to understand how to use AI efficiently.
